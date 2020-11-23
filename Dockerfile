@@ -19,4 +19,4 @@ RUN install -t bin drone
 
 
 # Alpine does not have bash but uses ash (sh)
-ENTRYPOINT ["/bin/sh"]
+CMD ["/bin/sh"]
