@@ -15,5 +15,8 @@ RUN apk add --no-cache groff zip python3 py3-pip bash jq
 # Add AWS CLI
 RUN pip3 install --upgrade pip && pip3 install awscli && rm -rf /var/cache/apk/*
 
+# Copy our scripts into the image
+COPY scripts ./scripts
+
 # Alpine does not have bash but uses ash (sh)
 CMD ["/bin/sh"]
